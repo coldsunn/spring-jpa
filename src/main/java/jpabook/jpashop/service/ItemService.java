@@ -30,6 +30,6 @@ public class ItemService {
     public Item findOne(Long itemId) {
         return itemRepository.findOne(itemId);
     }
-    // 우리가 하고 있는 코드처럼 리포지토리 기능을 그냥 가져다 똑같이 쓰는 경우에는 컨트롤러에서 리포지토리에 바로 접근해도 괜춘
+    // 우리가 작성한 코드처럼 리포지토리 기능을 그냥 가져다 똑같이 쓰는 경우에는 컨트롤러에서 리포지토리에 바로 접근해도 괜춘
     // 테스트 생략
 }
