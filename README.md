@@ -1,2 +1,2 @@
-# spring-jpa
+# spring-jpa2
 실전! 스프링 부트와 JPA 활용2 - API 개발과 성능 최적화를 수강하며 연습한 코드입니다.
