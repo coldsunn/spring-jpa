@@ -40,4 +40,10 @@ public class MemberService {
     public Member findOne(Long id) {
         return memberRepository.findOne(id);
     }
+
+    @Transactional
+    public void update(Long id, String name) { // 여기서 멤버를 반환하면 영속 상태가 끊긴 멤버가 반환, 결국 업데이트인데 id 가지고 조회하는 꼴이 되어버림, 반환해도 id 정도
+        Member member = memberRepository.findOne(id);
+        member.setName(name);
+    }
 }

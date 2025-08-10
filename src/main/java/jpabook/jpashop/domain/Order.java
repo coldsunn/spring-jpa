@@ -1,5 +1,6 @@
 package jpabook.jpashop.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -25,10 +26,12 @@ public class Order {
     @Column(name = "order_id")
     private Long id;
 
+    @JsonIgnore
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "order", cascade = ALL) // order 저장하면 orderItems까지 다 저장됨, 삭제도 마찬가지
     private List<OrderItem> orderItems = new ArrayList<>();
 
